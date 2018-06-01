@@ -1,44 +1,6 @@
-import { createStore } from "redux";
+import React from "react";
+import ReactDOM from "react-dom";
+import "normalize.css/normalize.css";
+import "./styles/styles.scss";
 
-//Actions
-const incrementCount = () => ({
-  type: "INCREMENT"
-});
-
-const decrementCount = () => ({
-  type: "DECREMENT"
-});
-
-//Reducer
-const countReducer = (state = { count: 0 }, action) => {
-  switch (action.type) {
-    case "INCREMENT":
-      return {
-        count: state.count + 1
-      };
-    case "DECREMENT":
-      return {
-        count: state.count - 1
-      };
-
-    default:
-      return state;
-  }
-};
-
-//Store
-const store = createStore(countReducer);
-
-//App
-store.subscribe(() => {
-  const state = store.getState();
-  document.getElementById("count").innerText = state.count;
-});
-
-document.getElementById("plus").addEventListener("click", () => {
-  store.dispatch(incrementCount());
-});
-
-document.getElementById("minus").addEventListener("click", () => {
-  store.dispatch(decrementCount());
-});
+ReactDOM.render(<div>Hello World</div>, document.getElementById("root"));
