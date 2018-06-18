@@ -34,3 +34,11 @@ React Redux is a library that is used to connect React Components to Redux. It i
 #### Higher Order Components
 
 I don't know very much about higher order components except that they are components that return components. That concept is central to React Redux, altough I don't understand it well enough to say exactly how. The example of higher order components that I have learned is centered aroundcomponent reuse. For example, imagine a component that should only be shown if a user is authenticated. Using a higher order component is helpful in this situation because it can handle the conditional rendering.
+
+---
+
+#### App Diagram 
+
+![Alt text](/app_diagram.jpg)
+
+---
